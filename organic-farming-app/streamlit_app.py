@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 from PIL import Image
@@ -69,19 +70,18 @@ elif menu == "Educational Resources":
     st.subheader("🎥 Videos on Farming Types")
 
     st.markdown("**🌱 Overview of Organic Farming**")
-    st.video("https://m.youtube.com/watch?v=lRyXlvIJFWI&pp=ygUPI2FncmljdXR1cmVzb2ls")
+    st.video("https://www.youtube.com/embed/bE5X0SkubIQ")
 
     st.markdown("**🌾 Zero Budget Natural Farming by Subhash Palekar**")
-    st.video("https://www.youtube.com/watch?v=97nlKseDges")
+    st.video("https://www.youtube.com/embed/SJX8Myg1r9E")
 
     st.markdown("**🌕 What is Biodynamic Farming?**")
-    st.video("https://www.youtube.com/watch?v=WIfYj1_96R0")
+    st.video("https://www.youtube.com/embed/QKnZBacXK4I")
 
     st.markdown("**🌿 Introduction to Permaculture**")
-    st.video("http://www.youtube.com/watch?v=pEWJ69SEb6Q")
+    st.video("https://www.youtube.com/embed/JV6vK6GQ1Uo")
 
     st.markdown("[🌐 Learn more on FAO Organic Agriculture](https://www.fao.org/organic-agriculture/en/)")
-
 
 # Post a Product
 elif menu == "Post a Product":
