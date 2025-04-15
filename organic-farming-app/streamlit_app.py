@@ -8,8 +8,6 @@ st.title("🌱 Organic Farming Support & Marketing Platform")
 
 # Load Images from local directory
 
-image_learn = Image.open("learn.png")
-image_market = Image.open("market.jpg")
 
 # Sidebar navigation
 menu = st.sidebar.radio("Navigate", ["Home", "Educational Resources", "Post a Product", "Marketplace", "Community Forum", "Loan/Donation Assistance"])
