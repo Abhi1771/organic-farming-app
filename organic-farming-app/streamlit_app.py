@@ -8,24 +8,27 @@ import os
 st.set_page_config(page_title="Organic Farming Platform", layout="wide")
 st.title("🌱 Organic Farming Support & Marketing Platform")
 
-# Load Images from local directory with error handling
+# Define image folder path
+image_path = "assets"
+
+# Load Images from assets folder
 try:
-    image_header = Image.open("header.png")
+    image_header = Image.open(os.path.join(image_path, "header.png"))
 except FileNotFoundError:
     image_header = None
-    st.warning("⚠️ 'header.png' not found.")
+    st.warning("⚠️ 'header.png' not found in /assets folder.")
 
 try:
-    image_learn = Image.open("learn.png")
+    image_learn = Image.open(os.path.join(image_path, "learn.png"))
 except FileNotFoundError:
     image_learn = None
-    st.warning("⚠️ 'learn.png' not found.")
+    st.warning("⚠️ 'learn.png' not found in /assets folder.")
 
 try:
-    image_market = Image.open("market.jpg")
+    image_market = Image.open(os.path.join(image_path, "market.jpg"))
 except FileNotFoundError:
     image_market = None
-    st.warning("⚠️ 'market.jpg' not found.")
+    st.warning("⚠️ 'market.jpg' not found in /assets folder.")
 
 # Sidebar navigation
 menu = st.sidebar.radio("Navigate", ["Home", "Educational Resources", "Post a Product", "Marketplace", "Community Forum", "Loan/Donation Assistance"])
