@@ -31,53 +31,46 @@ elif menu == "Educational Resources":
 
     st.markdown("Organic farming uses natural methods to grow crops while maintaining soil fertility and ecological balance. Below are essential topics:")
 
-    # Topic 1
-    with st.container():
-        st.markdown("### 🌾 Organic Fertilizers")
-        col1, col2 = st.columns([2, 1])
-        with col1:
-            st.markdown("- Use compost, green manure, bone meal, and biofertilizers.")
-        with col2:
-            st.video("https://m.youtube.com/watch?v=lRyXlvIJFWI&pp=ygUPI2FncmljdXR1cmVzb2ls")
+    # Compact Topic 1
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.markdown("**🌾 Organic Fertilizers**  \nUse compost, green manure, bone meal, and biofertilizers.")
+    with col2:
+        st.video("https://m.youtube.com/watch?v=lRyXlvIJFWI&pp=ygUPI2FncmljdXR1cmVzb2ls")
 
-    # Topic 2
-    with st.container():
-        st.markdown("### 🐛 Natural Pest Control")
-        col1, col2 = st.columns([2, 1])
-        with col1:
-            st.markdown("- Neem oil spray, crop rotation, and intercropping techniques help manage pests.")
-        with col2:
-            st.video("https://www.youtube.com/watch?v=97nlKseDges")
+    # Compact Topic 2
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.markdown("**🐛 Natural Pest Control**  \nNeem oil spray, crop rotation, and intercropping techniques help manage pests.")
+    with col2:
+        st.video("https://www.youtube.com/watch?v=97nlKseDges")
 
-    # Topic 3
-    with st.container():
-        st.markdown("### 🌱 Soil Health & Crop Rotation")
-        col1, col2 = st.columns([2, 1])
-        with col1:
-            st.markdown("- Rotate crops like legumes and cereals to maintain biodiversity and enrich soil.")
-        with col2:
-            st.video("https://www.youtube.com/watch?v=WIfYj1_96R0")
+    # Compact Topic 3
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.markdown("**🌱 Soil Health & Crop Rotation**  \nRotate crops like legumes and cereals to maintain biodiversity and enrich soil.")
+    with col2:
+        st.video("https://www.youtube.com/watch?v=WIfYj1_96R0")
 
-    # Topic 4
-    with st.container():
-        st.markdown("### 🌍 Climate Smart Agriculture")
-        col1, col2 = st.columns([2, 1])
-        with col1:
-            st.markdown("- Use drought-resistant crops, rainwater harvesting, agroforestry, and smart irrigation.")
-        with col2:
-            st.video("http://www.youtube.com/watch?v=pEWJ69SEb6Q")
+    # Compact Topic 4
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.markdown("**🌍 Climate Smart Agriculture**  \nUse drought-resistant crops, rainwater harvesting, agroforestry, and smart irrigation.")
+    with col2:
+        st.video("http://www.youtube.com/watch?v=pEWJ69SEb6Q")
 
-    # Topic 5
-    st.markdown("### 🧬 Types of Organic Farming")
+    # Types of Organic Farming - List
+    st.markdown("**🧬 Types of Organic Farming**")
     st.markdown("""
-    - **Pure Organic Farming** – Only natural inputs like compost and green manure  
-    - **Integrated Organic Farming** – Mixes crops, animals, and recycling  
-    - **Permaculture** – Mimics natural ecosystems  
-    - **Biodynamic Farming** – Uses lunar calendar; treats farm as a living organism  
-    - **Natural Farming** – 'Zero Budget Farming' by Subhash Palekar
-    """)
+- **Pure Organic Farming** – Only natural inputs like compost and green manure  
+- **Integrated Organic Farming** – Mixes crops, animals, and recycling  
+- **Permaculture** – Mimics natural ecosystems  
+- **Biodynamic Farming** – Uses lunar calendar; treats farm as a living organism  
+- **Natural Farming** – 'Zero Budget Farming' by Subhash Palekar
+""")
 
     st.markdown("[🌐 Learn more on FAO Organic Agriculture](https://www.fao.org/organic-agriculture/en/)")
+
 
 
 # Post a Product
