@@ -1,34 +1,15 @@
-
 import streamlit as st
 import pandas as pd
 from PIL import Image
-import os
 
 # Page config
 st.set_page_config(page_title="Organic Farming Platform", layout="wide")
 st.title("🌱 Organic Farming Support & Marketing Platform")
 
-# Define image folder path
-image_path = "assets"
-
-# Load Images from assets folder
-try:
-    image_header = Image.open(os.path.join(image_path, "header.png"))
-except FileNotFoundError:
-    image_header = None
-    st.warning("⚠️ 'header.png' not found in /assets folder.")
-
-try:
-    image_learn = Image.open(os.path.join(image_path, "learn.png"))
-except FileNotFoundError:
-    image_learn = None
-    st.warning("⚠️ 'learn.png' not found in /assets folder.")
-
-try:
-    image_market = Image.open(os.path.join(image_path, "market.jpg"))
-except FileNotFoundError:
-    image_market = None
-    st.warning("⚠️ 'market.jpg' not found in /assets folder.")
+# Load Images from local directory
+image_header = Image.open("header.png")
+image_learn = Image.open("learn.png")
+image_market = Image.open("market.jpg")
 
 # Sidebar navigation
 menu = st.sidebar.radio("Navigate", ["Home", "Educational Resources", "Post a Product", "Marketplace", "Community Forum", "Loan/Donation Assistance"])
@@ -41,8 +22,7 @@ if 'forum_posts' not in st.session_state:
 
 # Home
 if menu == "Home":
-    if image_header:
-        st.image(image_header, use_column_width=True)
+    st.image(image_header, use_column_width=True)
     st.header("Welcome to the Digital Platform for Organic Farmers")
     st.markdown("""
         This platform is a one-stop destination for:
@@ -54,8 +34,7 @@ if menu == "Home":
 
 # Educational Resources
 elif menu == "Educational Resources":
-    if image_learn:
-        st.image(image_learn, use_column_width=True)
+    st.image(image_learn, use_column_width=True)
     st.header("📚 Learn Organic Farming")
 
     st.markdown("""
@@ -103,6 +82,7 @@ elif menu == "Educational Resources":
 
     st.markdown("[🌐 Learn more on FAO Organic Agriculture](https://www.fao.org/organic-agriculture/en/)")
 
+
 # Post a Product
 elif menu == "Post a Product":
     st.header("🧺 Post Your Organic Product")
@@ -117,8 +97,7 @@ elif menu == "Post a Product":
 
 # Marketplace
 elif menu == "Marketplace":
-    if image_market:
-        st.image(image_market, use_column_width=True)
+    st.image(image_market, use_column_width=True)
     st.header("🛒 Organic Marketplace")
     if st.session_state.products:
         for item in st.session_state.products:
