@@ -34,18 +34,39 @@ elif menu == "Educational Resources":
         Below are some essential topics every organic farmer should know:
     """)
 
+    # Organic Fertilizers
     st.subheader("🌾 Organic Fertilizers")
-    st.write("Use compost, green manure, bone meal, and biofertilizers to enrich the soil without synthetic chemicals.")
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.write("Use compost, green manure, bone meal, and biofertilizers to enrich the soil without synthetic chemicals.")
+    with col2:
+        st.video("https://m.youtube.com/watch?v=lRyXlvIJFWI&pp=ygUPI2FncmljdXR1cmVzb2ls")
 
+    # Natural Pest Control
     st.subheader("🐛 Natural Pest Control")
-    st.write("Neem oil spray, crop rotation, and intercropping techniques help manage pests in a sustainable way.")
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.write("Neem oil spray, crop rotation, and intercropping techniques help manage pests in a sustainable way.")
+    with col2:
+        st.video("https://www.youtube.com/watch?v=97nlKseDges")
 
+    # Soil Health & Crop Rotation
     st.subheader("🌱 Soil Health & Crop Rotation")
-    st.write("Practice rotating crops like legumes and cereals to naturally replenish soil nutrients and maintain biodiversity.")
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.write("Practice rotating crops like legumes and cereals to naturally replenish soil nutrients and maintain biodiversity.")
+    with col2:
+        st.video("https://www.youtube.com/watch?v=WIfYj1_96R0")
 
+    # Climate Smart Agriculture
     st.subheader("🌍 Climate Smart Agriculture")
-    st.write("Adapt to climate change using drought-resistant crops, water harvesting, agroforestry, and smart irrigation systems.")
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.write("Adapt to climate change using drought-resistant crops, water harvesting, agroforestry, and smart irrigation systems.")
+    with col2:
+        st.video("http://www.youtube.com/watch?v=pEWJ69SEb6Q")
 
+    # Types of Organic Farming
     st.subheader("🧬 Types of Organic Farming")
     st.markdown("""
     Organic farming includes different methods suited to resources, goals, and ecosystems.  
@@ -58,21 +79,8 @@ elif menu == "Educational Resources":
     st.markdown("**4. Biodynamic Farming** – Treats the farm like a living body using lunar calendars.")
     st.markdown("**5. Natural Farming** – Promoted in India as 'Zero Budget Farming' by Subhash Palekar.")
 
-    st.subheader("🎥 Videos on Farming Types")
-
-    st.markdown("**🌱 Overview of Organic Farming**")
-    st.video("https://m.youtube.com/watch?v=lRyXlvIJFWI&pp=ygUPI2FncmljdXR1cmVzb2ls")
-
-    st.markdown("**🌾 Zero Budget Natural Farming by Subhash Palekar**")
-    st.video("https://www.youtube.com/watch?v=97nlKseDges")
-
-    st.markdown("**🌕 What is Biodynamic Farming?**")
-    st.video("https://www.youtube.com/watch?v=WIfYj1_96R0")
-
-    st.markdown("**🌿 Introduction to Permaculture**")
-    st.video("http://www.youtube.com/watch?v=pEWJ69SEb6Q")
-
     st.markdown("[🌐 Learn more on FAO Organic Agriculture](https://www.fao.org/organic-agriculture/en/)")
+
 
 # Post a Product
 elif menu == "Post a Product":
