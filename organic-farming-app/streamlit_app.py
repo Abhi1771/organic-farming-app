@@ -2,15 +2,30 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
+import os
 
 # Page config
 st.set_page_config(page_title="Organic Farming Platform", layout="wide")
 st.title("🌱 Organic Farming Support & Marketing Platform")
 
-# Load Images from local directory
-image_header = Image.open("header.png")
-image_learn = Image.open("learn.png")
-image_market = Image.open("market.jpg")
+# Load Images from local directory with error handling
+try:
+    image_header = Image.open("header.png")
+except FileNotFoundError:
+    image_header = None
+    st.warning("⚠️ 'header.png' not found.")
+
+try:
+    image_learn = Image.open("learn.png")
+except FileNotFoundError:
+    image_learn = None
+    st.warning("⚠️ 'learn.png' not found.")
+
+try:
+    image_market = Image.open("market.jpg")
+except FileNotFoundError:
+    image_market = None
+    st.warning("⚠️ 'market.jpg' not found.")
 
 # Sidebar navigation
 menu = st.sidebar.radio("Navigate", ["Home", "Educational Resources", "Post a Product", "Marketplace", "Community Forum", "Loan/Donation Assistance"])
@@ -23,7 +38,8 @@ if 'forum_posts' not in st.session_state:
 
 # Home
 if menu == "Home":
-    st.image(image_header, use_column_width=True)
+    if image_header:
+        st.image(image_header, use_column_width=True)
     st.header("Welcome to the Digital Platform for Organic Farmers")
     st.markdown("""
         This platform is a one-stop destination for:
@@ -35,7 +51,8 @@ if menu == "Home":
 
 # Educational Resources
 elif menu == "Educational Resources":
-    st.image(image_learn, use_column_width=True)
+    if image_learn:
+        st.image(image_learn, use_column_width=True)
     st.header("📚 Learn Organic Farming")
 
     st.markdown("""
@@ -70,16 +87,16 @@ elif menu == "Educational Resources":
     st.subheader("🎥 Videos on Farming Types")
 
     st.markdown("**🌱 Overview of Organic Farming**")
-    st.video("https://www.youtube.com/embed/bE5X0SkubIQ")
+    st.video("https://m.youtube.com/watch?v=lRyXlvIJFWI&pp=ygUPI2FncmljdXR1cmVzb2ls")
 
     st.markdown("**🌾 Zero Budget Natural Farming by Subhash Palekar**")
-    st.video("https://www.youtube.com/embed/SJX8Myg1r9E")
+    st.video("https://www.youtube.com/watch?v=97nlKseDges")
 
     st.markdown("**🌕 What is Biodynamic Farming?**")
-    st.video("https://www.youtube.com/embed/QKnZBacXK4I")
+    st.video("https://www.youtube.com/watch?v=WIfYj1_96R0")
 
     st.markdown("**🌿 Introduction to Permaculture**")
-    st.video("https://www.youtube.com/embed/JV6vK6GQ1Uo")
+    st.video("http://www.youtube.com/watch?v=pEWJ69SEb6Q")
 
     st.markdown("[🌐 Learn more on FAO Organic Agriculture](https://www.fao.org/organic-agriculture/en/)")
 
@@ -97,7 +114,8 @@ elif menu == "Post a Product":
 
 # Marketplace
 elif menu == "Marketplace":
-    st.image(image_market, use_column_width=True)
+    if image_market:
+        st.image(image_market, use_column_width=True)
     st.header("🛒 Organic Marketplace")
     if st.session_state.products:
         for item in st.session_state.products:
