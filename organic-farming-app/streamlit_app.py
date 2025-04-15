@@ -29,55 +29,53 @@ if menu == "Home":
 elif menu == "Educational Resources":
     st.header("📚 Learn Organic Farming")
 
+    st.markdown("Organic farming uses natural methods to grow crops while maintaining soil fertility and ecological balance. Below are essential topics:")
+
+    # Topic 1
+    with st.container():
+        st.markdown("### 🌾 Organic Fertilizers")
+        col1, col2 = st.columns([2, 1])
+        with col1:
+            st.markdown("- Use compost, green manure, bone meal, and biofertilizers.")
+        with col2:
+            st.video("https://m.youtube.com/watch?v=lRyXlvIJFWI&pp=ygUPI2FncmljdXR1cmVzb2ls")
+
+    # Topic 2
+    with st.container():
+        st.markdown("### 🐛 Natural Pest Control")
+        col1, col2 = st.columns([2, 1])
+        with col1:
+            st.markdown("- Neem oil spray, crop rotation, and intercropping techniques help manage pests.")
+        with col2:
+            st.video("https://www.youtube.com/watch?v=97nlKseDges")
+
+    # Topic 3
+    with st.container():
+        st.markdown("### 🌱 Soil Health & Crop Rotation")
+        col1, col2 = st.columns([2, 1])
+        with col1:
+            st.markdown("- Rotate crops like legumes and cereals to maintain biodiversity and enrich soil.")
+        with col2:
+            st.video("https://www.youtube.com/watch?v=WIfYj1_96R0")
+
+    # Topic 4
+    with st.container():
+        st.markdown("### 🌍 Climate Smart Agriculture")
+        col1, col2 = st.columns([2, 1])
+        with col1:
+            st.markdown("- Use drought-resistant crops, rainwater harvesting, agroforestry, and smart irrigation.")
+        with col2:
+            st.video("http://www.youtube.com/watch?v=pEWJ69SEb6Q")
+
+    # Topic 5
+    st.markdown("### 🧬 Types of Organic Farming")
     st.markdown("""
-        **Organic Farming** uses natural methods to grow crops while maintaining soil fertility and ecological balance.  
-        Below are some essential topics every organic farmer should know:
+    - **Pure Organic Farming** – Only natural inputs like compost and green manure  
+    - **Integrated Organic Farming** – Mixes crops, animals, and recycling  
+    - **Permaculture** – Mimics natural ecosystems  
+    - **Biodynamic Farming** – Uses lunar calendar; treats farm as a living organism  
+    - **Natural Farming** – 'Zero Budget Farming' by Subhash Palekar
     """)
-
-    # Organic Fertilizers
-    st.subheader("🌾 Organic Fertilizers")
-    col1, col2 = st.columns([2, 1])
-    with col1:
-        st.write("Use compost, green manure, bone meal, and biofertilizers to enrich the soil without synthetic chemicals.")
-    with col2:
-        st.video("https://m.youtube.com/watch?v=lRyXlvIJFWI&pp=ygUPI2FncmljdXR1cmVzb2ls")
-
-    # Natural Pest Control
-    st.subheader("🐛 Natural Pest Control")
-    col1, col2 = st.columns([2, 1])
-    with col1:
-        st.write("Neem oil spray, crop rotation, and intercropping techniques help manage pests in a sustainable way.")
-    with col2:
-        st.video("https://www.youtube.com/watch?v=97nlKseDges")
-
-    # Soil Health & Crop Rotation
-    st.subheader("🌱 Soil Health & Crop Rotation")
-    col1, col2 = st.columns([2, 1])
-    with col1:
-        st.write("Practice rotating crops like legumes and cereals to naturally replenish soil nutrients and maintain biodiversity.")
-    with col2:
-        st.video("https://www.youtube.com/watch?v=WIfYj1_96R0")
-
-    # Climate Smart Agriculture
-    st.subheader("🌍 Climate Smart Agriculture")
-    col1, col2 = st.columns([2, 1])
-    with col1:
-        st.write("Adapt to climate change using drought-resistant crops, water harvesting, agroforestry, and smart irrigation systems.")
-    with col2:
-        st.video("http://www.youtube.com/watch?v=pEWJ69SEb6Q")
-
-    # Types of Organic Farming
-    st.subheader("🧬 Types of Organic Farming")
-    st.markdown("""
-    Organic farming includes different methods suited to resources, goals, and ecosystems.  
-    Here are the most popular types:
-    """)
-
-    st.markdown("**1. Pure Organic Farming** – Uses only natural inputs like compost and green manure.")
-    st.markdown("**2. Integrated Organic Farming** – Mixes crops, animals, and waste recycling.")
-    st.markdown("**3. Permaculture** – Imitates natural ecosystems for sustainability.")
-    st.markdown("**4. Biodynamic Farming** – Treats the farm like a living body using lunar calendars.")
-    st.markdown("**5. Natural Farming** – Promoted in India as 'Zero Budget Farming' by Subhash Palekar.")
 
     st.markdown("[🌐 Learn more on FAO Organic Agriculture](https://www.fao.org/organic-agriculture/en/)")
 
