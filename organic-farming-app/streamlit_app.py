@@ -29,47 +29,59 @@ if menu == "Home":
 elif menu == "Educational Resources":
     st.header("📚 Learn Organic Farming")
 
-    st.markdown("Organic farming uses natural methods to grow crops while maintaining soil fertility and ecological balance. Below are essential topics:")
+    st.markdown("Below are essential topics in organic farming, presented as flashcards:")
 
-    # Compact Topic 1
-    col1, col2 = st.columns([2, 1])
-    with col1:
-        st.markdown("**🌾 Organic Fertilizers**  \nUse compost, green manure, bone meal, and biofertilizers.")
-    with col2:
-        st.video("https://m.youtube.com/watch?v=lRyXlvIJFWI&pp=ygUPI2FncmljdXR1cmVzb2ls")
+    # Card 1: Organic Fertilizers
+    with st.container():
+        st.markdown("""
+        <div style="border:1px solid #ddd; border-radius:10px; padding:15px; margin-bottom:10px; background-color:#f9f9f9;">
+        <strong>🌾 Organic Fertilizers</strong><br>
+        Use compost, green manure, bone meal, and biofertilizers.
+        </div>
+        """, unsafe_allow_html=True)
 
-    # Compact Topic 2
-    col1, col2 = st.columns([2, 1])
-    with col1:
-        st.markdown("**🐛 Natural Pest Control**  \nNeem oil spray, crop rotation, and intercropping techniques help manage pests.")
-    with col2:
-        st.video("https://www.youtube.com/watch?v=97nlKseDges")
+    # Card 2: Natural Pest Control
+    with st.container():
+        st.markdown("""
+        <div style="border:1px solid #ddd; border-radius:10px; padding:15px; margin-bottom:10px; background-color:#f9f9f9;">
+        <strong>🐛 Natural Pest Control</strong><br>
+        Neem oil spray, crop rotation, and intercropping techniques help manage pests.
+        </div>
+        """, unsafe_allow_html=True)
 
-    # Compact Topic 3
-    col1, col2 = st.columns([2, 1])
-    with col1:
-        st.markdown("**🌱 Soil Health & Crop Rotation**  \nRotate crops like legumes and cereals to maintain biodiversity and enrich soil.")
-    with col2:
-        st.video("https://www.youtube.com/watch?v=WIfYj1_96R0")
+    # Card 3: Soil Health
+    with st.container():
+        st.markdown("""
+        <div style="border:1px solid #ddd; border-radius:10px; padding:15px; margin-bottom:10px; background-color:#f9f9f9;">
+        <strong>🌱 Soil Health & Crop Rotation</strong><br>
+        Rotate crops like legumes and cereals to maintain biodiversity and enrich soil.
+        </div>
+        """, unsafe_allow_html=True)
 
-    # Compact Topic 4
-    col1, col2 = st.columns([2, 1])
-    with col1:
-        st.markdown("**🌍 Climate Smart Agriculture**  \nUse drought-resistant crops, rainwater harvesting, agroforestry, and smart irrigation.")
-    with col2:
-        st.video("http://www.youtube.com/watch?v=pEWJ69SEb6Q")
+    # Card 4: Climate Smart Agriculture
+    with st.container():
+        st.markdown("""
+        <div style="border:1px solid #ddd; border-radius:10px; padding:15px; margin-bottom:10px; background-color:#f9f9f9;">
+        <strong>🌍 Climate Smart Agriculture</strong><br>
+        Use drought-resistant crops, rainwater harvesting, agroforestry, and smart irrigation.
+        </div>
+        """, unsafe_allow_html=True)
 
-    # Types of Organic Farming - List
-    st.markdown("**🧬 Types of Organic Farming**")
-    st.markdown("""
-- **Pure Organic Farming** – Only natural inputs like compost and green manure  
-- **Integrated Organic Farming** – Mixes crops, animals, and recycling  
-- **Permaculture** – Mimics natural ecosystems  
-- **Biodynamic Farming** – Uses lunar calendar; treats farm as a living organism  
-- **Natural Farming** – 'Zero Budget Farming' by Subhash Palekar
-""")
+    # Card 5: Types of Organic Farming
+    with st.container():
+        st.markdown("""
+        <div style="border:1px solid #ddd; border-radius:10px; padding:15px; margin-bottom:10px; background-color:#f9f9f9;">
+        <strong>🧬 Types of Organic Farming</strong><br>
+        • <b>Pure Organic Farming</b> – Only natural inputs like compost and green manure<br>
+        • <b>Integrated Organic Farming</b> – Mixes crops, animals, and recycling<br>
+        • <b>Permaculture</b> – Mimics natural ecosystems<br>
+        • <b>Biodynamic Farming</b> – Uses lunar calendar; treats farm as a living organism<br>
+        • <b>Natural Farming</b> – 'Zero Budget Farming' by Subhash Palekar
+        </div>
+        """, unsafe_allow_html=True)
 
-    st.markdown("[🌐 Learn more on FAO Organic Agriculture](https://www.fao.org/organic-agriculture/en/)")
+    st.markdown('<a href="https://www.fao.org/organic-agriculture/en/" target="_blank">🌐 Learn more on FAO Organic Agriculture</a>', unsafe_allow_html=True)
+
 
 
 
