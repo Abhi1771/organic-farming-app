@@ -7,9 +7,9 @@ st.set_page_config(page_title="Organic Farming Platform", layout="wide")
 st.title("🌱 Organic Farming Support & Marketing Platform")
 
 # Load Images from local directory
-st.image("assets/header.png", use_column_width=True)
-st.image("assets/learn.png", use_column_width=True)
-st.image("assets/market.jpg", use_column_width=True)
+st.image("assets/header.png", use_container_width=True)
+st.image("assets/learn.png", use_container_width=True)
+st.image("assets/market.jpg", use_container_width=True)
 
 # Sidebar navigation
 menu = st.sidebar.radio("Navigate", ["Home", "Educational Resources", "Post a Product", "Marketplace", "Community Forum", "Loan/Donation Assistance"])
