@@ -1,15 +1,9 @@
 import streamlit as st
 import pandas as pd
-from PIL import Image
 
 # Page config
 st.set_page_config(page_title="Organic Farming Platform", layout="wide")
 st.title("🌱 Organic Farming Support & Marketing Platform")
-
-# Load Images from local directory
-st.image("assets/header.png", use_container_width=True)
-st.image("assets/learn.png", use_container_width=True)
-st.image("assets/market.jpg", use_container_width=True)
 
 # Sidebar navigation
 menu = st.sidebar.radio("Navigate", ["Home", "Educational Resources", "Post a Product", "Marketplace", "Community Forum", "Loan/Donation Assistance"])
@@ -22,7 +16,6 @@ if 'forum_posts' not in st.session_state:
 
 # Home
 if menu == "Home":
-    st.image(image_header, use_column_width=True)
     st.header("Welcome to the Digital Platform for Organic Farmers")
     st.markdown("""
         This platform is a one-stop destination for:
@@ -34,7 +27,6 @@ if menu == "Home":
 
 # Educational Resources
 elif menu == "Educational Resources":
-    st.image(image_learn, use_column_width=True)
     st.header("📚 Learn Organic Farming")
 
     st.markdown("""
@@ -82,7 +74,6 @@ elif menu == "Educational Resources":
 
     st.markdown("[🌐 Learn more on FAO Organic Agriculture](https://www.fao.org/organic-agriculture/en/)")
 
-
 # Post a Product
 elif menu == "Post a Product":
     st.header("🧺 Post Your Organic Product")
@@ -97,7 +88,6 @@ elif menu == "Post a Product":
 
 # Marketplace
 elif menu == "Marketplace":
-    st.image(image_market, use_column_width=True)
     st.header("🛒 Organic Marketplace")
     if st.session_state.products:
         for item in st.session_state.products:
