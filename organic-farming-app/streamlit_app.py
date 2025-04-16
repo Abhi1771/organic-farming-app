@@ -6,73 +6,77 @@ st.set_page_config(page_title="Organic Farming Platform", layout="wide")
 st.title("🌱 Organic Farming Support & Marketing Platform")
 
 # Sidebar navigation
-menu = st.sidebar.radio("Navigate", ["Home", "Educational Resources", "Post a Product", "Marketplace", "Community Forum", "Loan/Donation Assistance"])
+menu = st.sidebar.radio("Navigate", [
+    "Home",
+    "Educational Resources",
+    "Post a Product",
+    "Marketplace",
+    "Community Forum",
+    "Loan/Donation Assistance"
+])
 
-# Dummy storage for products and posts (can later connect to Firebase)
+# Dummy storage (can connect to Firebase later)
 if 'products' not in st.session_state:
     st.session_state.products = []
 if 'forum_posts' not in st.session_state:
     st.session_state.forum_posts = []
 
-# Home
+# Home Page
 if menu == "Home":
     st.header("Welcome to the Digital Platform for Organic Farmers")
     st.markdown("""
         This platform is a one-stop destination for:
-        - 🌿 Learning organic practices and sustainable farming
-        - 🛍️ Showcasing and selling organic products
-        - 💬 Interacting with the farming community
-        - 💰 Applying for loans and donations
+        - 🌿 Learning organic practices and sustainable farming  
+        - 🛍️ Showcasing and selling organic products  
+        - 💬 Interacting with the farming community  
+        - 💰 Applying for loans and donations  
     """)
 
 # Educational Resources
 elif menu == "Educational Resources":
     st.header("📚 Learn Organic Farming")
 
+    st.markdown("Organic farming uses natural methods to grow crops while maintaining soil fertility and ecological balance. Below are essential topics:")
+
+    # Compact Topic 1
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.markdown("**🌾 Organic Fertilizers**  \nUse compost, green manure, bone meal, and biofertilizers.")
+    with col2:
+        st.video("https://m.youtube.com/watch?v=lRyXlvIJFWI&pp=ygUPI2FncmljdXR1cmVzb2ls")
+
+    # Compact Topic 2
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.markdown("**🐛 Natural Pest Control**  \nNeem oil spray, crop rotation, and intercropping techniques help manage pests.")
+    with col2:
+        st.video("https://www.youtube.com/watch?v=97nlKseDges")
+
+    # Compact Topic 3
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.markdown("**🌱 Soil Health & Crop Rotation**  \nRotate crops like legumes and cereals to maintain biodiversity and enrich soil.")
+    with col2:
+        st.video("https://www.youtube.com/watch?v=WIfYj1_96R0")
+
+    # Compact Topic 4
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.markdown("**🌍 Climate Smart Agriculture**  \nUse drought-resistant crops, rainwater harvesting, agroforestry, and smart irrigation.")
+    with col2:
+        st.video("http://www.youtube.com/watch?v=pEWJ69SEb6Q")
+
+    # Types of Organic Farming
+    st.markdown("**🧬 Types of Organic Farming**")
     st.markdown("""
-        **Organic Farming** uses natural methods to grow crops while maintaining soil fertility and ecological balance.  
-        Below are some essential topics every organic farmer should know:
-    """)
+- **Pure Organic Farming** – Only natural inputs like compost and green manure  
+- **Integrated Organic Farming** – Mixes crops, animals, and recycling  
+- **Permaculture** – Mimics natural ecosystems  
+- **Biodynamic Farming** – Uses lunar calendar; treats farm as a living organism  
+- **Natural Farming** – 'Zero Budget Farming' by Subhash Palekar
+""")
 
-    st.subheader("🌾 Organic Fertilizers")
-    st.write("Use compost, green manure, bone meal, and biofertilizers to enrich the soil without synthetic chemicals.")
-
-    st.subheader("🐛 Natural Pest Control")
-    st.write("Neem oil spray, crop rotation, and intercropping techniques help manage pests in a sustainable way.")
-
-    st.subheader("🌱 Soil Health & Crop Rotation")
-    st.write("Practice rotating crops like legumes and cereals to naturally replenish soil nutrients and maintain biodiversity.")
-
-    st.subheader("🌍 Climate Smart Agriculture")
-    st.write("Adapt to climate change using drought-resistant crops, water harvesting, agroforestry, and smart irrigation systems.")
-
-    st.subheader("🧬 Types of Organic Farming")
-    st.markdown("""
-    Organic farming includes different methods suited to resources, goals, and ecosystems.  
-    Here are the most popular types:
-    """)
-
-    st.markdown("**1. Pure Organic Farming** – Uses only natural inputs like compost and green manure.")
-    st.markdown("**2. Integrated Organic Farming** – Mixes crops, animals, and waste recycling.")
-    st.markdown("**3. Permaculture** – Imitates natural ecosystems for sustainability.")
-    st.markdown("**4. Biodynamic Farming** – Treats the farm like a living body using lunar calendars.")
-    st.markdown("**5. Natural Farming** – Promoted in India as 'Zero Budget Farming' by Subhash Palekar.")
-
-    st.subheader("🎥 Videos on Farming Types")
-
-    st.markdown("**🌱 Overview of Organic Farming**")
-    st.video("https://m.youtube.com/watch?v=lRyXlvIJFWI&pp=ygUPI2FncmljdXR1cmVzb2ls")
-
-    st.markdown("**🌾 Zero Budget Natural Farming by Subhash Palekar**")
-    st.video("https://www.youtube.com/watch?v=97nlKseDges")
-
-    st.markdown("**🌕 What is Biodynamic Farming?**")
-    st.video("https://www.youtube.com/watch?v=WIfYj1_96R0")
-
-    st.markdown("**🌿 Introduction to Permaculture**")
-    st.video("http://www.youtube.com/watch?v=pEWJ69SEb6Q")
-
-    st.markdown("[🌐 Learn more on FAO Organic Agriculture](https://www.fao.org/organic-agriculture/en/)")
+    st.markdown('[🌐 Learn more on FAO Organic Agriculture](https://www.fao.org/organic-agriculture/en/)')
 
 # Post a Product
 elif menu == "Post a Product":
@@ -114,6 +118,44 @@ elif menu == "Community Forum":
 # Loan/Donation Assistance
 elif menu == "Loan/Donation Assistance":
     st.header("💰 Apply for Loan / Request Donation")
+
+    st.markdown("You can request financial support through our platform or explore the below **Government Schemes** for farmers:")
+
+    st.subheader("📑 Popular Government Schemes for Organic Farmers")
+
+    with st.expander("🌾 Paramparagat Krishi Vikas Yojana (PKVY)"):
+        st.markdown("""
+- **Objective:** Promote organic farming through cluster-based approach  
+- **Eligibility:** Small/marginal farmers in clusters  
+- **Benefits:** ₹50,000 per hectare over 3 years (including certification and training)  
+- **How to Apply:** Visit local agriculture department office or apply via [official website](https://pgsindia-ncof.gov.in/)
+""")
+
+    with st.expander("💰 Kisan Credit Card (KCC)"):
+        st.markdown("""
+- **Objective:** Provide timely credit to farmers  
+- **Eligibility:** Any farmer practicing agriculture or allied activities  
+- **Benefits:** Loan up to ₹3 lakh at low interest rates  
+- **How to Apply:** Through nearby bank branches or via [PM Kisan Portal](https://pmkisan.gov.in/)
+""")
+
+    with st.expander("🌿 National Mission on Sustainable Agriculture (NMSA)"):
+        st.markdown("""
+- **Objective:** Promote sustainable agriculture with focus on organic practices  
+- **Eligibility:** Farmers practicing conservation agriculture or organic inputs  
+- **Benefits:** Financial support for compost units, bio-pesticide production etc.  
+- **How to Apply:** Through the agriculture department under the NMSA portal
+""")
+
+    with st.expander("💸 NABARD Organic Farming Loan"):
+        st.markdown("""
+- **Objective:** Support organic farming infrastructure and inputs  
+- **Eligibility:** Individuals, SHGs, FPOs practicing or transitioning to organic farming  
+- **Benefits:** Subsidized loans for seeds, inputs, training  
+- **How to Apply:** Visit your nearest NABARD-affiliated bank or contact [NABARD](https://www.nabard.org/)
+""")
+
+    st.subheader("📝 Apply for Assistance through this Platform")
     with st.form("loan_form"):
         fname = st.text_input("Full Name")
         purpose = st.text_area("Purpose of Loan/Donation")
